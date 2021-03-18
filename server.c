@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <netinet/tcp.h>
 #include <arpa/inet.h>
 #include <err.h>
@@ -37,7 +36,6 @@ int main(int argc, char** argv) {
         err(EXIT_FAILURE, "fatal: couldn't initialise the socket");
 
     getsockname(sock, (struct sockaddr*)&addr, &(socklen_t){sizeof addr});
-    
     fprintf(stderr, "info: listening on 0.0.0.0:%d\n", ntohs(addr.sin_port));
 
     for(;;) {
