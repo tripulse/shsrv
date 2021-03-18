@@ -13,6 +13,10 @@ would attempt to intercept this connection, maybe except you?
 
 ### Usage
 Run `./server /bin/bash` to run the server to serve a `bash` shell per connection. After `/bin/bash` can
-follow multiple arguments with which the executable will be run.
+follow multiple arguments with which the executable will be run. You may use `netcat` to act as the client
+(flexibility, bam! Can your SSH do this?) like `netcat 0.0.0.0 8788`.
+
+IP is obtained from `ip -4` and port is obtained from the output of `./server`.
+
 
 [1]: https://man7.org/linux/man-pages/man2/accept.2.html
