@@ -52,5 +52,10 @@ int main(int argc, char** argv) {
 
             execv(argv[1], argv + 2);
         }
+        // WHY: on the parent we don't interact, and close() just decreases refcount
+        //      of the associated socket object, it is still referred by the forked
+        //      subprocess thus kept alive, if we don't do this the client will hang
+        //      forever if the process is finished and they didn't set a timeout.
+        close(conn);
     }
 }
