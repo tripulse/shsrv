@@ -19,5 +19,8 @@ follow multiple arguments with which the executable will be run. You may use `ne
 
 IP is obtained from `ip -4` and port is obtained from the output of `./server`.
 
+### Structure
+![](https://i.imgur.com/1DYI1QM.png)
+
 
 [1]: https://man7.org/linux/man-pages/man2/accept.2.html
