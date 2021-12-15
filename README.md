@@ -1,1 +1,3 @@
-Consider reading https://tripulsive.blogspot.com/2021/08/things-wrong-with-openssh.html to understand why exactly I am writing this.
+This projet has been moved to GitLab, and renamed to [YASH][0].
+
+[0]: https://gitlab.com/tripulse/yash
